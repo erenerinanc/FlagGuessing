@@ -25,8 +25,7 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 Text("Guess the Flag")
-                    .foregroundColor(.white)
-                    .font(.largeTitle.bold())
+                    .titleStyle(color: .yellow, font: .largeTitle)
                 VStack(spacing: 15) {
                     VStack {
                         Text("Tap the flag of")
@@ -53,8 +52,7 @@ struct ContentView: View {
                 Spacer()
                 
                 Text("Score: \(score)")
-                    .foregroundColor(.white)
-                    .font(.title.bold())
+                    .titleStyle(color: .white, font: .title.bold())
                 
                 Spacer()
             }
@@ -84,18 +82,10 @@ struct ContentView: View {
     }
 }
 
-struct FlagImage: View {
-    var name: String
-    var body: some View {
-        Image(name)
-            .renderingMode(.original)
-            .clipShape(Capsule())
-            .shadow(radius: 5)
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
